@@ -42,13 +42,17 @@ def export_ziptree(export_folder, zip_filename):
     print "\nCCC folders zipped to " + zip_filename + ".zip\n"
 
 
-def import_copy(import_folder):
+def import_copy(import_folder, ret=0):
     try:
         if zipfile.is_zipfile(import_folder):
-            zf = zipfile.ZipFile(import_folder, 'r')
-            zf.extractall(path=ccc_dir, members=None, pwd=None)
-            zf.close()
-            ret = shutil.move(ccc_dir, ccc_path)
+            if not os.path.exists(ccc_dir):
+                zf = zipfile.ZipFile(import_folder, 'r')
+                zf.extractall(path=ccc_dir, members=None, pwd=None)
+                zf.close()
+                ret = shutil.move(ccc_dir, ccc_path)
+            else:
+                print "\nError: Destination folder " + import_folder + " already exists.\n"
+                quit(1)
         else:
             ret = shutil.copytree(import_folder + "/", ccc_path + "/")
     except (IOError, os.error) as why:
