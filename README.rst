@@ -18,7 +18,5 @@ optional arguments:
 			imports from the selected source folder
 	-x EXPORTFOLDER, --exportfolder EXPORTFOLDER
 			exports to the selected destination folder
-	-z EXPORTZIP, --exportzip EXPORTZIP
+	-z [EXPORTZIP], --exportzip [EXPORTZIP]
 			exports to a specified zip file
-
-EXPORTZIP is optional argument
