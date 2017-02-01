@@ -8,7 +8,20 @@ mm-CCCbackup
 .. image:: https://img.shields.io/badge/build-passing-brightgreen.svg
 		:alt: Build: passing
 
-usage: mm-CCCbackup.py 	[-h] [-r]
+Written on Python 2.7.10.
+
+This script backs up and restores Bombich CCC 4.x folder to/from a specified location.
+
+Tested using Bombich CCC 4.1.13 (4496).
+
+----
+
+SUDO is required. Your user account must have been included in /etc/sudoers first. \
+If you don't know how to do it, google 'Mac sudoers'.
+
+System restart is required in case of import and remove.
+
+usage: sudo python mm-CCCbackup.py 	[-h] [-r]
 [-m IMPORTFOLDER | -x EXPORTFOLDER | -z [EXPORTZIP]]
 
 optional arguments:
@@ -21,4 +34,4 @@ optional arguments:
 	-z EXPORTZIP, --exportzip EXPORTZIP
 			exports to a specified zip file
 
-EXPORTZIP is optional argument
+EXPORTZIP is an optional argument. Defaults to cccbackup.zip on script folder.
