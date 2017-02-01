@@ -26,7 +26,7 @@ usage: sudo python mm-CCCbackup.py 	[-h] [-r]
 
 optional arguments:
 	-h, --help	show this help message and exit
-	-r, --remove	removes CCC folder from its location
+	-r, --remove	removes CCC folder from its location (export only)
 	-m IMPORTFOLDER, --importfolder IMPORTFOLDER
 			imports from the selected source folder / zip file
 	-x EXPORTFOLDER, --exportfolder EXPORTFOLDER
