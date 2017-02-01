@@ -28,7 +28,7 @@ optional arguments:
 	-h, --help	show this help message and exit
 	-r, --remove	removes CCC folder from its location
 	-m IMPORTFOLDER, --importfolder IMPORTFOLDER
-			imports from the selected source folder
+			imports from the selected source folder / zip file
 	-x EXPORTFOLDER, --exportfolder EXPORTFOLDER
 			exports to the selected destination folder
 	-z EXPORTZIP, --exportzip EXPORTZIP
